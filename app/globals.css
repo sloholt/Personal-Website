@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Figma-style tokens */
+:root{
+  --bg:#ffffff;
+  --text:#111827;
+  --muted:#4B5563;
+  --accent:#10B981; /* emerald-500 */
+}
+
+html{ scroll-behavior:smooth; }
+body{ background:var(--bg); color:var(--text); }
+
+.container{ @apply max-w-6xl mx-auto px-6; }
+.section{ @apply py-24; }
+.h1{ @apply text-4xl md:text-6xl font-semibold tracking-tight; }
+.p{ @apply text-base md:text-lg text-[color:var(--muted)]; }
+
+.btn{ @apply inline-flex items-center px-4 py-2 rounded-xl font-medium; background:var(--accent); color:white; }
+.btn-outline{ @apply inline-flex items-center px-4 py-2 rounded-xl font-medium border; border-color:var(--accent); color:var(--accent); background:transparent; }
+
+nav a{ @apply text-sm md:text-base hover:opacity-80; }
+
+header{ backdrop-filter: blur(6px); background: rgba(255,255,255,0.7); }
