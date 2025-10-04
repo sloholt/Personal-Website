@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <section id="about" className="bg-gray-50">
-      <div className="mx-auto max-w-[1440px] px-5 md:px-20 pt-24 pb-6">
+      <div className="section-container">
         {/* FULL-WIDTH, CENTERED PILL */}
         <div className="w-full flex justify-center mb-6">
           <span

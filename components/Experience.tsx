@@ -8,7 +8,7 @@ type Exp = {
   companyAlt: string;
   title: string;
   dateRange: string;
-  bullets: string[];
+  bullets: (string | JSX.Element)[];
 };
 
 const experiences: Exp[] = [
@@ -16,12 +16,32 @@ const experiences: Exp[] = [
     companyLogo: "/logos/mcgill.png",
     companyAlt: "McGill University",
     title: "Summer Research Student",
-    dateRange: "May–August 2025",
+    dateRange: "May 2025 - Present",
     bullets: [
-      "Summer Researcher, McGill — Dept. of Mathematics & Statistics (Supervisor: Prof. Steele).",
+      "Summer Researcher, McGill University — Dept. of Mathematics & Statistics (Supervisor: Prof. Steele).",
       "Modeled the non-linear link between salary dispersion and NHL performance using Poisson GLM and dynamic-panel GMM.",
-      "Built an interactive dashboard and a reproducible pipeline to explore team-year salary structures under the cap.",
-      "Shipped a public dashboard and paper link.",
+      "Built a companion interactive web dashboard and a reproducible pipeline to explore team-year salary structures under the cap.",
+      <>
+        Click to view my{" "}
+        <a
+          href="https://nhl-salary-inequality-analysis-dash.onrender.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+        >
+          dashboard
+        </a>{" "}
+        and my{" "}
+        <a
+          href="https://sloholt.github.io/NHL-Salary-Inequality-Analysis/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+        >
+          paper
+        </a>
+        !
+      </>
     ],
   },
   {
@@ -86,14 +106,15 @@ export default function Experience() {
               }}
             >
               {/* Logo column */}
-              <div className="flex-shrink-0 flex items-start md:items-center justify-center w-[72px] md:w-[96px]">
+              <div className="flex-shrink-0 flex items-start justify-start">
+
                 <Image
-                  src={e.companyLogo}
-                  alt={e.companyAlt}
-                  width={96}
-                  height={48}
-                  className="h-8 md:h-10 w-auto object-contain"
-                />
+                src={e.companyLogo}
+                alt={e.companyAlt}
+                width={102}
+                height={37}
+                className="w-[102px] h-auto object-contain"
+              />
               </div>
 
               {/* Content */}

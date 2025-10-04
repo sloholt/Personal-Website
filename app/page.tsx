@@ -6,6 +6,7 @@ import About from "@/components/About";
 import Education from "@/components/Education";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
+import Extracurriculars from "@/components/Extracurriculars";
 
 export default function Home() {
   return (
@@ -20,23 +21,19 @@ export default function Home() {
 
       {/* EDUCATION */}
       <Education />
-      {/* Green divider */}
-      <hr className="mx-auto max-w-[1440px] h-[2px] bg-emerald-500 border-0 rounded-full my-10" />
 
       {/* SKILLS */}
       <Skills />
 
       {/* EXPERIENCE */}
       <Experience />
+      {/* EXTRA CURRICULARS*/}
+      <Extracurriculars />
 
       {/* CONTACT */}
-      <section id="contact" className="section">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">Contact</h2>
-          <ContactCard />
-        </div>
-      </section>
+      <ContactCard />
 
+      {/* FOOTER */}
       <Footer />
     </main>
   );

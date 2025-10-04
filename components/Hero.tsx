@@ -82,7 +82,7 @@ export default function Hero() {
           {/* front block (photo) */}
           <div className="absolute left-0 top-0 w-[280px] h-[320px] border-[8px] border-white overflow-hidden">
             <Image
-              src="/headshot.png" // make sure this is in /public
+              src="/headshot.jpg" // make sure this is in /public
               alt="Sloane portrait"
               fill
               className="object-cover"

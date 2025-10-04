@@ -27,64 +27,39 @@ const row2 = skills.slice(7);
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-white">
-      <div className="mx-auto max-w-[1440px] px-5 md:px-20 pt-24 pb-16">
-        {/* Pill badge */}
-        <div className="w-full flex justify-center mb-3">
-          <span className="inline-flex items-center justify-center px-5 py-1 rounded-[12px] bg-emerald-500 text-white text-xs font-semibold">
+    <section id="skills" className="bg-gray-50">
+      {/* Green divider */}
+      <div className="w-full h-[2px] bg-emerald-500 mx-auto max-w-[1440px]" />
+
+      <div className="section-container flex flex-col items-center gap-12">
+        <div className="flex flex-col items-center gap-6 mb-12">
+          <span className="px-3 py-1 rounded-full bg-emerald-500 text-white text-sm font-medium">
             Skills
           </span>
+          <p className="text-center text-gray-600 text-sm md:text-base leading-6 md:leading-7 max-w-2xl mx-auto">
+            I have hands-on experience with the following technologies,
+            frameworks, and tools:
+          </p>
         </div>
 
-        {/* Sub-heading */}
-        <p className="text-center text-gray-600 text-sm md:text-base leading-6 md:leading-7 max-w-2xl mx-auto">
-          I have hands-on experience with the following technologies,
-          frameworks, and tools:
-        </p>
-
-        {/* --- Desktop / tablet (tighter spacing) --- */}
-        <div className="mt-8 hidden md:flex md:flex-col md:space-y-8">
-          {/* Row 1 */}
-          <div className="mx-auto w-full md:max-w-[1000px] lg:max-w-[1080px] xl:max-w-[1120px] 2xl:max-w-[1216px] flex justify-between">
-            {row1.map((s) => (
-              <div
-                key={s.name}
-                className="flex h-[160px] flex-col justify-center items-start gap-4"
-              >
-                <Image
-                  src={s.src}
-                  alt={s.name}
-                  width={48}
-                  height={48}
-                  className="h-12 w-12 object-contain"
-                />
-                <span className="text-sm text-gray-600">{s.name}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Row 2 */}
-          <div className="mx-auto w-full md:max-w-[1000px] lg:max-w-[1080px] xl:max-w-[1120px] 2xl:max-w-[1216px] flex justify-between">
-            {row2.map((s) => (
-              <div
-                key={s.name}
-                className="flex h-[160px] flex-col justify-center items-start gap-4"
-              >
-                <Image
-                  src={s.src}
-                  alt={s.name}
-                  width={48}
-                  height={48}
-                  className="h-12 w-12 object-contain"
-                />
-                <span className="text-sm text-gray-600">{s.name}</span>
-              </div>
-            ))}
-          </div>
+        {/* Desktop */}
+        <div className="hidden md:grid grid-cols-7 gap-x-[119px] gap-y-[48px] justify-center mx-auto">
+          {skills.map((s) => (
+            <div key={s.name} className="flex flex-col items-center gap-4">
+              <Image
+                src={s.src}
+                alt={s.name}
+                width={48}
+                height={48}
+                className="h-12 w-12 object-contain"
+              />
+              <span className="text-sm text-gray-600">{s.name}</span>
+            </div>
+          ))}
         </div>
 
-        {/* --- Mobile fallback: a bit tighter too --- */}
-        <div className="mt-8 grid grid-cols-3 gap-x-6 gap-y-6 md:hidden">
+        {/* Mobile */}
+        <div className="grid grid-cols-3 gap-x-6 gap-y-6 md:hidden">
           {skills.map((s) => (
             <div key={s.name} className="flex flex-col items-center gap-2.5">
               <Image
