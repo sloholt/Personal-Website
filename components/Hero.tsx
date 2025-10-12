@@ -10,7 +10,7 @@ export default function Hero() {
                       flex items-center justify-between gap-12"
       >
         {/* LEFT: text */}
-        <div className="w-[652px]">
+        <div className="w-[768px]">
           <h1 className="text-[56px] leading-[64px] font-semibold tracking-tight mb-8">
             Hi, I’m Sloane
           </h1>
@@ -26,7 +26,6 @@ export default function Hero() {
             correlating to major sports.
           </p>
 
-          {/* meta rows */}
           <div className="mt-9 space-y-9">
             {/* location */}
             <div className="flex items-center gap-2">
@@ -44,7 +43,7 @@ export default function Hero() {
               </span>
             </div>
 
-            {/* socials (row width follows the 652px column) */}
+            {/* socials */}
             <div className="flex items-center gap-4">
               <a
                 href="https://github.com/sloholt"
@@ -71,18 +70,18 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* RIGHT: photo with layered cards */}
+        {/* RIGHT: photo */}
         <div
           className="relative w-[310px] h-[350px]"
           style={{ filter: "drop-shadow(0 4px 4px rgba(0,0,0,0.25))" }}
         >
-          {/* back block (grey) */}
+          {/* grey block */}
           <div className="absolute right-0 top-8 w-[280px] h-[320px] border-[8px] border-white bg-gray-200" />
 
-          {/* front block (photo) */}
+          {/* photo block */}
           <div className="absolute left-0 top-0 w-[280px] h-[320px] border-[8px] border-white overflow-hidden">
             <Image
-              src="/headshot.jpg" // make sure this is in /public
+              src="/headshot.jpg"
               alt="Sloane portrait"
               fill
               className="object-cover"

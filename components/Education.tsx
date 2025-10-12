@@ -3,7 +3,7 @@
 export default function Education() {
   return (
     <section id="education" className="bg-white">
-      <div className="section-container">
+      <div className="section-container flex flex-col items-center">
         {/* Pill badge */}
         <div className="w-full flex justify-center mb-3">
           <span className="inline-flex items-center justify-center px-5 py-1 rounded-[12px] bg-emerald-500 text-white text-xs font-semibold">

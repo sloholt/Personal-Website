@@ -29,9 +29,11 @@ export default function Skills() {
   return (
     <section id="skills" className="bg-gray-50">
       {/* Green divider */}
-      <div className="w-full h-[2px] bg-emerald-500 mx-auto max-w-[1440px]" />
+      <section className="bg-gray-50 w-full">
+        <hr className="w-full h-[2px] bg-emerald-500 border-0 rounded-full" />
+      </section>
 
-      <div className="section-container flex flex-col items-center gap-12">
+      <div className="section-container flex flex-col items-center text-center">
         <div className="flex flex-col items-center gap-6 mb-12">
           <span className="px-3 py-1 rounded-full bg-emerald-500 text-white text-sm font-medium">
             Skills

@@ -1,12 +1,13 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactCard from "@/components/ContactCard";
-import Hero from "@/components/Hero"; // ← add this
+import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Education from "@/components/Education";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Extracurriculars from "@/components/Extracurriculars";
+import Contact from "@/components/ContactCard";
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
       <Extracurriculars />
 
       {/* CONTACT */}
-      <ContactCard />
+      <Contact />
 
       {/* FOOTER */}
       <Footer />

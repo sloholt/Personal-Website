@@ -22,37 +22,52 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 backdrop-blur ${
-        scrolled ? "bg-white/80 shadow-sm" : "bg-white/60"
-      }`}
+      className={[
+        "sticky top-0 z-50 backdrop-blur transition-colors",
+        scrolled ? "bg-white/80 shadow-sm" : "bg-white/60",
+      ].join(" ")}
     >
-      <div className="container flex items-center justify-between py-3">
+      <div className="header-container flex items-center justify-between py-3">
         {/* Left: logo */}
-        <Link href="#hero" className="flex items-center gap-2">
+        <Link
+          href="#hero"
+          className="flex items-center gap-2"
+          aria-label="Home"
+        >
           <Image
             src="/sh_logo.png"
             alt="SH logo"
-            width={120}            // set to the image’s natural px width
-            height={60}            // set to the image’s natural px height
+            width={120}
+            height={60}
             priority
-            className="h-6 w-auto" // displays at 24px tall; keeps aspect
+            className="h-6 w-auto -ml-1"
           />
           <span className="sr-only">Home</span>
         </Link>
 
         {/* Right: nav + divider + button */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8" aria-label="Main">
           {NAV.map((item) => (
-            <a key={item.href} href={item.href} className="text-sm md:text-base hover:opacity-80">
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm md:text-base hover:opacity-80"
+            >
               {item.label}
-            </a>
+            </Link>
           ))}
           <span className="mx-2 h-6 w-px bg-gray-200" />
-          <a href="/Sloane_Holtby_CV.pdf" className="btn rounded-full px-4 py-2" download>
+          <a
+            href="/SloaneHoltby_CV.pdf"
+            target="_blank"
+            rel="noopener"
+            className="btn rounded-full px-4 py-2"
+          >
             Download CV
           </a>
         </nav>
 
+        {/* Mobile placeholder */}
         <div className="md:hidden" />
       </div>
     </header>

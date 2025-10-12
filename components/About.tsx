@@ -25,7 +25,7 @@ export default function About() {
             className="relative w-[320px] h-[360px] shrink-0"
             style={{ filter: "drop-shadow(0 4px 4px rgba(0,0,0,0.25))" }}
           >
-            {/* back block (grey) */}
+            {/* grey block */}
             <div className="absolute -left-6 top-12 w-[280px] h-[300px] border-[8px] border-white bg-gray-200" />
             {/* front photo */}
             <div className="absolute left-0 top-0 w-[280px] h-[320px] border-[8px] border-white overflow-hidden">
@@ -47,65 +47,70 @@ export default function About() {
 
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
-                I’m a McGill senior double-majoring in Mathematical Statistics
-                and Software Engineering with a minor in Economics.
+                My interest in sports analytics came naturally; affinity for
+                sports and excellence in math. It started first as a multisport
+                athlete, then through participating in fantasy leagues and
+                bracket challenges. That curiosity for sports evolved into a
+                technical focus: building tools that turn messy data into
+                actionable insights.
               </p>
 
               <p>
-                I build data-driven sports analytics tools and the back-end
-                systems that power them. My current work focuses on developing
-                player-evaluation models that combine on-ice impact with
-                positive media momentum to highlight players who perform and
-                trend positively. My goal across all my projects is simple:
-                transparent methods, defensible assumptions, and actionable
-                takeaways for front offices and leadership. Sports have become a
-                large part of my identity.
+                Recently, I built a 2015–2024 NHL roster-economics dataset by
+                joining Spotrac contract data with team results, quantified
+                inequality using the Gini coefficient, and modeled wins (ROW)
+                with Poisson GLM/GMM. The project is available as an interactive
+                dashboard with takeaways for roster design, and I’m currently
+                refining the research for publishing review later this year.
               </p>
 
               <p>
-                Sports have become a large part of my identity. Beyond following
-                hockey/football/golf, I dig into CBA/cap mechanics and build
-                tools people use—right now a fantasy football lineup optimizer
-                that maximizes weekly expected points under roster constraints
-                (projections, positional scarcity, bye weeks, risk).
+                On the engineering side, I’ve worked across the full software
+                development lifecycle: scoping, design, TypeScript/Python
+                implementation, testing, CI/CD on Azure DevOps with SonarCloud
+                gates, and post-release monitoring. I’ve standardized
+                TypeScript-first repos, automated developer tasks with Bash,
+                instrumented apps with structured metrics, and written runbooks
+                that cut new-dev setup from ~8 hours to ~25 minutes. I also
+                evaluated and rolled out GitHub Copilot with team guidelines to
+                speed up safe, repeatable environments.
               </p>
 
               <p>
-                I have experience working across the full SDLC: scoping → design
-                → TypeScript/Python implementation → testing → CI/CD on Azure
-                DevOps with SonarCloud quality gates → post-release monitoring.
-                I’ve standardized TypeScript-first repos, automated developer
-                tasks with Bash/PowerShell, instrumented apps with structured
-                metrics, and written runbooks—cutting new-dev setup from ~8
-                hours to ~25 minutes. I’ve also evaluated and rolled out GitHub
-                Copilot with team guidelines to speed up safe, repeatable
-                environments.
+                I also serve as the President of CodeJam, McGill Engineering’s
+                largest hackathon. I lead a large team to plan and execute every
+                aspect of a weekend-long event that hosts hundreds of
+                participants, mentors, and industry sponsors. From logistics and
+                sponsorships to technical infrastructure and team coordination,
+                this role has sharpened my leadership, communication, and
+                execution skills. It sets me apart as someone who not only
+                builds real-world applicable systems, but also builds teams,
+                drives initiatives, and delivers under pressure.
               </p>
 
               <div>
                 <p className="font-medium mb-1">Where I excel:</p>
                 <ul className="list-disc pl-5 space-y-1">
                   <li>
-                    Bridging front offices/management and data & engineering
-                    teams with clear, audience-appropriate communication.
+                    Bridging technical and non-technical teams with clear,
+                    audience-appropriate communication.
                   </li>
                   <li>
-                    Pairing econometrics with production software so models
-                    become products with clean interfaces, reliable pipelines,
-                    and measurable impact.
+                    Pairing econometrics with production software to turn models
+                    into products with clean interfaces and reliable pipelines.
                   </li>
                   <li>
-                    Building reproducible analytics and documentation so work
-                    can be trusted, reused, and shipped
+                    Building reproducible analytics and documentation across the
+                    full data science lifecycle so work can be trusted, reused,
+                    and shipped.
                   </li>
                 </ul>
               </div>
 
               <p>
-                I’m seeking roles in data science/analytics or software
-                engineering with sports, finance, or research-driven teams—where
-                rigorous analysis meets product constraints and real decisions.
-                If that’s your world, I’d love to connect.
+                I am seeking roles in data science, analytics or software
+                engineering, especially where rigorous analysis meets product
+                constraints and real-world decisions.
               </p>
             </div>
           </div>

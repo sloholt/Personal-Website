@@ -1,16 +1,6 @@
-"use client";
-
 import Image from "next/image";
 
-type Extracurricular = {
-  logo: string;
-  alt: string;
-  title: string;
-  role: string;
-  bullets: string[];
-};
-
-const extracurriculars: Extracurricular[] = [
+const extracurriculars = [
   {
     logo: "/codejam.png",
     alt: "CodeJam McGill University",
@@ -28,8 +18,8 @@ const extracurriculars: Extracurricular[] = [
     title: "McGill Women in Computer Science",
     role: "VP External",
     bullets: [
-      "Serving as the liaison between McWiCS and other McGill clubs, representing McWiCS at Industry events, and coordinating joint events to foster inter-club collaborations and industry partnerships.",
-      "McGill Representative for the Pan-Canada WiCS events and initiatives.",
+      "Serving as the liaison between McWICS and other McGill clubs, representing McWICS at Industry events, and coordinating joint events to foster inter-club collaborations and industry partnerships.",
+      "McGill Representative for the Pan-Canada WICS events and initiatives.",
     ],
   },
   {
@@ -47,10 +37,11 @@ const extracurriculars: Extracurricular[] = [
 export default function Extracurriculars() {
   return (
     <section id="extracurriculars" className="bg-gray-50">
-      {/* Green divider at top */}
-      <hr className="mx-auto max-w-[1440px] h-[2px] bg-emerald-500 border-0 rounded-full" />
+      {/* Green divider */}
+      <section className="bg-gray-50 w-full">
+        <hr className="w-full h-[2px] bg-emerald-500 border-0 rounded-full" />
+      </section>
 
-      {/* Content constrained + centered */}
       <div className="section-container">
         {/* Header */}
         <div className="flex flex-col items-center gap-3 mb-12">
@@ -63,11 +54,11 @@ export default function Extracurriculars() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[48px] w-full">
           {extracurriculars.map((item, idx) => (
             <div
               key={idx}
-              className="flex flex-col items-center gap-6 p-8 md:p-12 rounded-xl bg-white shadow-md min-h-[480px] h-full"
+              className="flex flex-col items-center p-[48px] gap-[24px] rounded-xl bg-white shadow-md min-h-[480px] h-full"
             >
               {/* Logo */}
               <Image
@@ -75,11 +66,11 @@ export default function Extracurriculars() {
                 alt={item.alt}
                 width={64}
                 height={64}
-                className="rounded-full mb-2"
+                className="rounded-full"
               />
 
               {/* Title + Role */}
-              <div className="flex flex-col items-center gap-1 mb-4">
+              <div className="flex flex-col items-center gap-[24px]">
                 <h3 className="text-gray-900 font-semibold text-lg text-center">
                   {item.title}
                 </h3>

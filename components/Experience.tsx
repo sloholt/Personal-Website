@@ -40,8 +40,8 @@ const experiences: Exp[] = [
         >
           paper
         </a>
-        !
-      </>
+        ! I am currently preparing this research for publication.
+      </>,
     ],
   },
   {
@@ -100,21 +100,19 @@ export default function Experience() {
               "
               style={{
                 // Figma spec: width 896, height 360, padding 32, radius 12, shadow
-                // We let height be auto for responsiveness; the rest matches.
                 boxShadow:
                   "0 4px 3px rgba(0,0,0,0.07), 0 2px 2px rgba(0,0,0,0.06)",
               }}
             >
               {/* Logo column */}
               <div className="flex-shrink-0 flex items-start justify-start">
-
                 <Image
-                src={e.companyLogo}
-                alt={e.companyAlt}
-                width={102}
-                height={37}
-                className="w-[102px] h-auto object-contain"
-              />
+                  src={e.companyLogo}
+                  alt={e.companyAlt}
+                  width={102}
+                  height={37}
+                  className="w-[102px] h-auto object-contain"
+                />
               </div>
 
               {/* Content */}

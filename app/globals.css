@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Figma-style tokens */
 :root {
   --bg: #ffffff;
   --text: #111827;
   --muted: #4b5563;
-  --accent: #10b981; /* emerald-500 */
+  --accent: #10b981;
 }
 
 html {
@@ -16,6 +15,9 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
+}
+.header-container {
+  @apply max-w-[1440px] mx-auto px-20;
 }
 
 .container {
