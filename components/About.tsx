@@ -30,7 +30,7 @@ export default function About() {
             {/* front photo */}
             <div className="absolute left-0 top-0 w-[280px] h-[320px] border-[8px] border-white overflow-hidden">
               <Image
-                src="/vball.jpg"
+                src="/vball1.JPG"
                 alt="Volleyball action"
                 fill
                 priority

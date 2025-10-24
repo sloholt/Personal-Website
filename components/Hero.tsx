@@ -1,5 +1,6 @@
 "use client";
 
+import { fellSC } from "@/app/fonts";
 import Image from "next/image";
 
 export default function Hero() {
@@ -7,23 +8,25 @@ export default function Hero() {
     <section id="hero" className="bg-white">
       <div
         className="mx-auto max-w-[1440px] min-h-[552px] px-20 py-24
-                      flex items-center justify-between gap-12"
+                flex items-center justify-center gap-8 md:gap-10"
       >
         {/* LEFT: text */}
-        <div className="w-[768px]">
-          <h1 className="text-[56px] leading-[64px] font-semibold tracking-tight mb-8">
-            Hi, I’m Sloane
+        <div className="max-w-[768px] flex-1">
+          <h1
+            className={`${fellSC.className} text-[44px] leading-[56px] tracking-tight mb-4`}
+          >
+            Sloane Stevenson Holtby,
           </h1>
 
-          <p className="p">
-            I’m a McGill senior double-majoring in Mathematical Statistics and
-            Software Engineering with a minor in Economics. Recently I modeled
-            how NHL roster structure under the salary cap relates to regular
-            season wins, built on a 2015–2024 dataset and delivered as an
-            interactive dashboard. On the engineering, side I ship end-to-end
-            systems and improve Developer Experience. I’m a USPORTS volleyball
-            alumni, active in a variety of sports with a passion for events
-            correlating to major sports.
+          <p className="p text-[15px] md:text-[17px] leading-7 md:leading-8">
+            McGill senior double-majoring in Mathematical Statistics and
+            Software Engineering with a minor in Economics. Recently modeled how
+            NHL roster structure under the salary cap relates to regular season
+            wins, built on a 2015–2024 dataset and delivered as an interactive
+            dashboard. On the engineering side, ships end-to-end systems and
+            improves Developer Experience. USPORTS volleyball alumni, President
+            of McGill Engineering's largest hackathon, and past VP of McGill
+            Women in Computer Science.
           </p>
 
           <div className="mt-9 space-y-9">
@@ -72,7 +75,7 @@ export default function Hero() {
 
         {/* RIGHT: photo */}
         <div
-          className="relative w-[310px] h-[350px]"
+          className="relative w-[310px] h-[350px] shrink-0 self-center ml-4 md:ml-6"
           style={{ filter: "drop-shadow(0 4px 4px rgba(0,0,0,0.25))" }}
         >
           {/* grey block */}
