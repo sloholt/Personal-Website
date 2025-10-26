@@ -88,6 +88,8 @@ export default function Hero() {
               alt="Sloane portrait"
               fill
               className="object-cover"
+              sizes="264px"
+              quality={85}
               priority
             />
           </div>

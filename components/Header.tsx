@@ -58,7 +58,7 @@ export default function Header() {
           ))}
           <span className="mx-2 h-6 w-px bg-gray-200" />
           <a
-            href="/SloaneHoltby_CV.pdf"
+            href="/SloaneHoltbyCV.pdf"
             target="_blank"
             rel="noopener"
             className="btn rounded-full px-4 py-2"
